@@ -1,0 +1,31 @@
+extends layout/site-layout
+include modules/mixins
+
+append config
+  - var PageTitle         = "Inline Grid"
+  - var headerTitle       = PageTitle.concat(" Demo")
+  - var MetaDesc          = "Example of Css Inline Grid Demo"
+  - var jQuery            = true
+  - var updateBodyClass   = BodyClasses.push( 'extraclass', 'secondclass' )
+  - var thisPage          = "Css Grids Demo"
+  - var PageTitle         = PageTitle.concat(' | ' + thisPage)
+  - var kittenImgUrl      = 'http://placekitten.com/g/300/300'
+    
+block content
+  .container
+    ul.inline-grid
+      li.inline-grid__column
+        h4 This is awesome
+        img( src=kittenImgUrl alt="kitten" )
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione numquam reprehenderit magni commodi itaque id earum eveniet maxime cumque veritatis.
+
+      li.inline-grid__column
+        h4 This is awesome
+        img( src=kittenImgUrl alt="kitten" )
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+      - for (var i = 0; i < 10; ++i) {
+      li.inline-grid__column
+        h4 This is awesome
+        img( src=kittenImgUrl alt="kitten" )
+      - }

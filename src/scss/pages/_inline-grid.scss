@@ -1,0 +1,33 @@
+/*********************************************
+ * Inline Grid Styles
+ *********************************************/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+ul.inline-grid {
+  font-size: 0;
+  @include margin( null -15px null -15px );
+
+  li.inline-grid__column {
+    width: calc(25% - 30px);
+    min-height: 250px;
+    border: 1px solid #000;
+    display: inline-block;
+    margin: 15px;
+    position: relative;
+    vertical-align: top;
+
+    h4,
+    p {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
